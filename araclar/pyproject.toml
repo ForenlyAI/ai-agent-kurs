@@ -1,0 +1,12 @@
+[project]
+name = "ai-agent-101-araclar"
+version = "1.0.0"
+description = "AI Agent 101 lab'ı için ekran görüntüsü ve terminal çıktısı araçları (yalnız ders üretimi; öğrenci bunlara ihtiyaç duymaz)"
+requires-python = ">=3.12"
+dependencies = [
+    "playwright==1.63.0",
+    "pillow==11.3.0",
+]
+
+[tool.uv]
+package = false

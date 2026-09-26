@@ -1,0 +1,42 @@
+{
+  "name": "AI Agent 101 — Araştırma Asistanı Hattı (Python 3.12 + Ollama, Qwen3-4B-Instruct-2507 işlemcide)",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12-bookworm",
+  "forwardPorts": [
+    8070
+  ],
+  "portsAttributes": {
+    "8070": {
+      "label": "Araştırma hattı sitesi",
+      "onAutoForward": "notify"
+    },
+    "11434": {
+      "label": "Model (Ollama)",
+      "onAutoForward": "silent"
+    }
+  },
+  "containerEnv": {
+    "AJAN_MODEL_URL": "http://127.0.0.1:11434/v1/chat/completions",
+    "AJAN_ZAMAN_ASIMI": "600"
+  },
+  "postCreateCommand": "bash .devcontainer/kur.sh",
+  "postStartCommand": "nohup ollama serve > /tmp/ollama.log 2>&1 &",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ],
+      "settings": {
+        "workbench.startupEditor": "readme"
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    }
+  },
+  "hostRequirements": {
+    "cpus": 4,
+    "memory": "16gb"
+  }
+}

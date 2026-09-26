@@ -1,0 +1,5 @@
+{"model": "yerel", "temperature": 0, "max_tokens": 200,
+ "messages": [{"role": "system", "content": "Sen bir araştırma ajanısın. Kendi belleğinden ASLA cevap verme. ÖNCE ara aracını çağır."},
+              {"role": "user", "content": "Yeşilkent'te 2025'te kaç scooter kazası olmuş?"}],
+ "tools": [{"type": "function", "function": {"name": "ara", "description": "Kütüphanede belge arar.",
+            "parameters": {"type": "object", "properties": {"sorgu": {"type": "string"}}, "required": ["sorgu"]}}}]}
