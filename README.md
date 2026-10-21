@@ -1,4 +1,4 @@
-# AI Agent 101 · Lab — Araştırma Asistanı Hattı
+# Yapay Zekâ Ajanı Kurmak · Lab — Araştırma Asistanı Hattı
 
 Bir konuyu alt sorulara bölen **orkestratör**, bu soruları **paralel** araştıran **ajanlar**, bulguları
 **model dışında doğrulayan** bir denetim, kaynak göstererek rapor yazan bir **derleme ajanı** ve
